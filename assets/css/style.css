@@ -74,12 +74,14 @@ h1, h2, h3, h4, h5, h6 {
 
 body {
     display: grid;
-    grid-template-columns: 1fr 3fr;
-    grid-template-rows: 1fr 5fr;
-    grid-template-areas: "sidebar header"
-    "sidebar main";
+    grid-template-columns: 260px 1fr;
+    grid-template-rows: min-content 1fr;
+    grid-template-areas: 
+      "sidebar header"
+      "sidebar main";
     font-family: 'Montserrat', system-ui, -apple-system, sans-serif;
     font-weight: 400;
+    min-height: 100vh;
 }
 
 /* Sidebar */
@@ -91,6 +93,7 @@ body {
     padding: 20px 20px 20px 20px;
     gap: 20px;
     background-color: var(--darkpink);
+    height: 100vh;
 }
 
 #sidebar picture,
@@ -229,7 +232,7 @@ input[type="search"] {
 }
 
 #greeting h2 {
-  font-size: clamp(1.2rem, 2vw, 1.5rem);
+  font-size: clamp(1rem, 2vw, 1.2rem);
 }
 
 #greeting-text {
@@ -278,9 +281,47 @@ input[type="search"] {
 
 header {
     grid-area: header;
+    max-height: 20vh;
 }
+
+/* Main Content */
 
 main {
     grid-area: main;
+    margin-top: 20px;
+    margin-left: 10px;
+}
+
+/* Projects */
+.project-card {
+  display: flex;
+  flex-direction: column;
+  width: clamp(400px, 21vw, 600px);
+  border-left-width: 8px;
+  border-left-style: groove;
+  border-left-color: var(--lightpink);
+  border-radius: 6px;
+  padding-left: 10px;
+}
+
+.project-title {
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: var(--darkpink);
+}
+
+.project-description {
+  font-size: 0.8rem;
+  width: clamp(45ch, 20vw, 75ch);
+}
+
+.project-buttons {
+  display: flex;
+  align-self: flex-end;
+}
+
+.project-buttons > button {
+  border: none;
+  background-color: transparent;
 }
 
