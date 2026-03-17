@@ -53,8 +53,9 @@ h1, h2, h3, h4, h5, h6 {
   isolation: isolate;
 }
 
-* {
-    background-color: gray;
+:root {
+  --darkpink: rgb(69, 2, 49);
+  
 }
 
 @font-face {
@@ -82,12 +83,39 @@ body {
     display: flex;
     flex-direction: column;
     padding-left: 20px;
+    gap: 40px;
+    background-color: var(--darkpink);
+}
+
+#sidebar picture,
+#sidebar p,
+#sidebar img,
+#home {
+    background-color: var(--darkpink);
 }
 
 #sidebar h1 {
     position: relative;
-    left:-20px;
+    left: clamp(-10px, 2vw, -20px);
+    width: 80%;
 }
+
+
+
+.page-link {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: clamp(6px, 4vw, 16px);
+    text-decoration: none;
+    color: white;
+}
+
+.page-link img {
+  min-width: 32px;
+}
+
+.page-link
 
 header {
     grid-area: header;
