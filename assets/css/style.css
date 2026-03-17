@@ -193,9 +193,35 @@ input[type="search"] {
   font-weight: 550;
 }
 
-#profile-section picture {
-  display: inline;
+/* Bottom Row */
+#header-bottom-row {
+  background-color: var(--darkgray);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  color: white;
 }
+
+#greeting {
+  display: flex;
+  align-items: center;
+}
+
+#greeting picture {
+  width: min(20vw, 100px);
+}
+
+#greeting img {
+  width: 100%;
+}
+
+#greeting h2 {
+  min-width: 45ch;
+}
+
+
+
 
 header {
     grid-area: header;
