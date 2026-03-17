@@ -197,11 +197,14 @@ input[type="search"] {
 #header-bottom-row {
   background-color: var(--darkgray);
   display: flex;
+  gap: 20px;
   justify-content: space-between;
   align-items: center;
   padding: 10px 20px;
   color: white;
 }
+
+/* Left */
 
 #greeting {
   display: flex;
@@ -217,10 +220,20 @@ input[type="search"] {
 }
 
 #greeting h2 {
-  min-width: 45ch;
+  font-size: clamp(1.2rem, 2vw, 1.5rem);
 }
 
+#greeting-text {
+  min-width: 0;
+}
 
+/* Right */
+
+#commands {
+  display: flex;
+  gap: 15px;
+  padding-right: 20px;
+}
 
 
 header {
