@@ -75,8 +75,18 @@ body {
     font-weight: 400;
 }
 
+/* Sidebar */
+
 #sidebar {
     grid-area: sidebar;
+    display: flex;
+    flex-direction: column;
+    padding-left: 20px;
+}
+
+#sidebar h1 {
+    position: relative;
+    left:-20px;
 }
 
 header {
@@ -86,3 +96,4 @@ header {
 main {
     grid-area: main;
 }
+
