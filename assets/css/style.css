@@ -58,6 +58,7 @@ h1, h2, h3, h4, h5, h6 {
 :root {
   font-size: 16px;
   --darkpink: rgb(60, 2, 69);
+  --darkgray: #1d1d1d;
 
 }
 
@@ -126,6 +127,55 @@ body {
 
 .page-link p {
   font-size: 1.25rem;
+}
+
+/* Header */
+/* Top Row */
+
+#header-top-row,
+#nav-left-side,
+#nav-right-side,
+#profile-section {
+  display: flex;
+  flex-direction: row;
+}
+
+#header-top-row {
+  background-color: var(--darkgray);
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Left Side */
+#nav-left-side {
+  width: 50%;
+}
+
+#nav-left-side > form > button {
+  background-color: var(--darkgray);
+  border: none;
+  margin-bottom: 4px;
+}
+
+#nav-left-side > form {
+  display: flex;
+  align-items: center;
+}
+
+#nav-left-side > form > input {
+  border-radius: 20px;
+  font-size: 1.2rem;
+  width: 100%;
+  
+}
+
+input[type="search"] {
+  padding-left: 10px;
+  min-width: max(20vw, 200px)
+} 
+
+#profile-section picture {
+  display: inline;
 }
 
 header {
