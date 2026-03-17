@@ -160,21 +160,29 @@ body {
   margin-bottom: 4px;
 }
 
+#nav-left-side {
+  flex-grow: 1;
+  max-width: 600px;
+  margin-right: 20px;
+}
+
 #nav-left-side > form {
   display: flex;
   align-items: center;
+  width: 100%;
 }
 
 #nav-left-side > form > input {
   border-radius: 20px;
   font-size: 1.2rem;
   width: 100%;
+  padding: 8px 15px;
   
 }
 
 input[type="search"] {
   padding-left: 10px;
-  min-width: max(20vw, 200px)
+  width: 100%;
 } 
 
 /* Right side */
@@ -233,6 +241,16 @@ input[type="search"] {
   display: flex;
   gap: 15px;
   padding-right: 20px;
+}
+
+.command {
+  border-radius: 100px;
+  padding: 10px 20px;
+  font-size: clamp(1rem, 2vw, 1.2rem);
+  font-weight: 600;
+  background-color: var(--lightpink);
+  border: 6px solid var(--darkpink);
+  color: white;
 }
 
 
