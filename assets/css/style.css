@@ -53,9 +53,12 @@ h1, h2, h3, h4, h5, h6 {
   isolation: isolate;
 }
 
+/* Full Page Styles */
+
 :root {
-  --darkpink: rgb(69, 2, 49);
-  
+  font-size: 16px;
+  --darkpink: rgb(60, 2, 69);
+
 }
 
 @font-face {
@@ -82,8 +85,8 @@ body {
     grid-area: sidebar;
     display: flex;
     flex-direction: column;
-    padding-left: 20px;
-    gap: 40px;
+    padding: 20px 20px 20px 20px;
+    gap: 20px;
     background-color: var(--darkpink);
 }
 
@@ -96,26 +99,34 @@ body {
 
 #sidebar h1 {
     position: relative;
-    left: clamp(-10px, 2vw, -20px);
+    left: clamp(-8px, 2vw, -20px);
     width: 80%;
 }
 
-
+#main-pages,
+#plumbing {
+  left: -20px;
+}
 
 .page-link {
     display: flex;
     flex-direction: row;
     align-items: center;
-    gap: clamp(6px, 4vw, 16px);
+    gap: clamp(2px, 1vw, 8px);
     text-decoration: none;
     color: white;
+    width: 80%;
+    margin-top: 10px;
 }
 
 .page-link img {
-  min-width: 32px;
+  width: 24px;
+  min-width: 24px;
 }
 
-.page-link
+.page-link p {
+  font-size: 1.25rem;
+}
 
 header {
     grid-area: header;
