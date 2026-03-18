@@ -290,18 +290,41 @@ main {
     grid-area: main;
     margin-top: 20px;
     margin-left: 10px;
+    display: grid;
+    grid-template-areas: 
+      "h3 h3 h3 announcements"
+      "projects projects projects announcements"
+      "projects projects projects announcements"
+      "projects projects projects trending"
+      "projects projects projects trending" ;
+    max-height: 100vh;
 }
 
 /* Projects */
+h3 {
+  grid-area: h3;
+}
+
+#projects {
+  grid-area: projects;
+  display: grid;
+  gap: 20px;
+  grid-template-rows: repeat(3, 1fr);
+  grid-template-columns: repeat(3, 1fr);
+  margin-right: 100px;
+}
+
 .project-card {
   display: flex;
   flex-direction: column;
-  width: clamp(400px, 21vw, 600px);
+  justify-content: center;
+  width: clamp(400px, 21vw, 400px);
   border-left-width: 8px;
   border-left-style: groove;
   border-left-color: var(--lightpink);
   border-radius: 6px;
   padding-left: 10px;
+  box-shadow: 2px 2px 2px 2px var(--darkgray);
 }
 
 .project-title {
@@ -312,7 +335,7 @@ main {
 
 .project-description {
   font-size: 0.8rem;
-  width: clamp(45ch, 20vw, 75ch);
+  width: 45ch;
 }
 
 .project-buttons {
@@ -323,5 +346,38 @@ main {
 .project-buttons > button {
   border: none;
   background-color: transparent;
+}
+
+/* Announcements */
+
+#announcements {
+  grid-area: announcements;
+}
+
+.announcement {
+  padding: 10px 0;
+}
+
+.announcement::after {
+  content: "";
+  display: block;
+  margin-top: 10px;
+  border-bottom: 1px solid var(--lightpink);
+}
+
+.announcement-title {
+  color: var(--darkpink);
+  font-size: 1.1rem;
+  font-weight: 700;
+}
+
+.announcement-content {
+  color: var(--darkgray);
+  width: clamp(25ch, 5vw, 35ch);
+}
+
+/* Trending */
+#trending {
+  grid-area: trending;
 }
 
